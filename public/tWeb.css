@@ -1,0 +1,1377 @@
+body {
+    margin: 0;
+    background-color: #d6daed;
+    display:flex;
+    min-height:100vh;
+    flex-direction: column;
+}
+
+#content {
+    background-color: #eaf3ff;
+    flex: 1;
+}
+.wrapper{
+    background-color:#fff;
+    width:960px;
+    margin: 0 auto;
+    padding:20px;
+    height:100%;
+}
+@media screen and (max-width: 1000px){
+    .wrapper{
+        background-color:#fff;
+        width:750px;
+        margin: 0 auto;
+        padding:20px;
+        height:100%;
+    }
+}
+@media screen and (max-width: 800px){
+    .wrapper{
+        background-color:#fff;
+        width:600px;
+        margin: 0 auto;
+        padding:20px;
+        height:100%;
+    }
+}
+@media screen and (max-width: 650px){
+    .wrapper{
+        background-color:#fff;
+        width:500px;
+        margin: 0 auto;
+        padding:20px;
+        height:100%;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .wrapper{
+        background-color:#fff;
+        width:400px;
+        margin: 0 auto;
+        padding:20px;
+        height:100%;
+    }
+}
+
+/* HEADER */
+.header {
+    padding: 0.5em;	
+    height: 70px;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+}
+#SignIn,#SignUp{
+    color:black;
+    text-decoration:none;
+}
+
+.login_signup{
+    font-size:20px;
+    margin-right: 2em;
+}
+
+.logo{
+    color:white;
+    margin-left: 2em;
+    width:50%
+}
+
+.logo h2{
+    font-size:40px;
+}
+
+/*  NAVBAR */
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+/*   FOOTER   */
+
+.footer {
+    background: #000;
+    width: 100%;
+    color: #fff;
+    font-size: 1em;
+    display: flex;
+    flex-direction: row;  
+    justify-content: center;
+}
+.footer_wrap_left{
+    margin-top: 0.5em;
+    margin-bottom:0.5em;
+    border-right: 1px solid white;
+    padding-right:3em;
+    width: 33%;
+    align-self:center;
+}
+.footer_wrap{
+    margin-top: 0.5em;
+    margin-bottom:0.5em;
+    padding-right: 3em;
+    width: 34%;
+    align-self:center;
+}
+.footer_wrap_right{
+    margin-top: 0.5em;
+    margin-bottom:0.5em;
+    border-left: 1px solid white;
+    padding-left:3em;
+    width: 33%;
+    align-self:center;
+}
+.footer_anchor{
+    color:#fff;
+    text-decoration: none;
+}
+
+/*   CONTENUTO HOMEPAGE   */
+
+.event_box{
+    max-width:16em;
+    height:21em;
+    border-style: solid;
+    border-width:1px;
+    box-shadow:10px 10px 10px grey;
+    background-color:white;
+    overflow: hidden;
+    border-radius: 20px;
+    border-color:#948e8e;
+    display:flex;
+    flex-direction:column;
+}
+
+.event_box a{
+    text-decoration: none;
+    color: inherit;
+    display:flex;
+    flex-direction: column;
+    flex:1;
+}
+
+.event_box h2{
+    text-align:center;
+    margin-bottom:5px;
+}
+.event_box h5{
+    margin-bottom:3px;
+    margin-top:3px;
+    margin-left: 10px;
+    color:#948e8e;
+}
+
+.event_box hr{
+    margin:0;
+    color:#948e8e;
+    border: none;
+    height: 0.5px;
+    background-color: #948e8e;
+}
+
+.event_box .luogo_evento{
+    margin-left: 10px;
+    margin-bottom: 0px;
+    margin-top: 2px;
+}
+
+.event_box .data_evento{
+    color:#948e8e;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top:2px;
+}
+
+.event_box .img_container{
+    overflow:hidden;
+    display:flex;
+    flex:1;
+}
+
+.event_box img{
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    position:relative;
+    transition: transform .4s;
+    flex:1;
+    object-fit:cover;
+}
+
+.event_box:hover img {
+    transform: scale(1.1);
+    transform-origin: 50% 50%;
+}
+
+.grid_container{
+    margin:0 auto;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+/* questi servono per rendere la griglia responsive*/
+@media screen and (min-width: 350px) {
+    .grid_container { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media screen and (min-width: 730px) {
+    .grid_container { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media screen and (min-width: 950px) {
+    .grid_container { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media screen and (min-width: 1200px) {
+    .grid_container { grid-template-columns: repeat(5, 1fr); }
+}
+
+
+.home_evidenza{
+    margin-bottom: 5em;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+.home_scopri{
+    padding-bottom: 5em;  
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.home_evidenza h1, .home_scopri h1{
+    font-size:30px;
+    display: inline-block;
+}
+
+/* CONTENUTO INFORMATIVO FAQS */
+.faqH1{
+    display :inline-block;
+    font-size:30px;
+}
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.activefaq, .accordion:hover {
+    background-color: #ccc;
+}
+/*Il selettore after serve per aggiungere mediante la proprietà content un elemento alla fine del blockbox che ha la classe di stile preceduta dal selettore after*/
+.accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.activefaq:after {
+    content: "\2212";
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+
+/* CONTENUTO CATALOGO*/
+
+/*Form ricerca */
+
+.errors{
+    color:red;
+}
+
+.form_ricerca{
+    padding-top:2em;
+    padding-left:3em;
+    padding-right:3em;
+    margin-bottom:1em;
+}
+
+.form-inline {  
+    display: flex;
+    background-color: #eeeeee;
+    flex-direction:column;
+}
+
+.form-inline label {
+    margin: 5px 10px 5px 0;
+}
+
+.form-inline input {
+    vertical-align: middle;
+    margin: 5px 10px 5px 0;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.form-inline button {
+    padding: 10px 20px;
+    background-color: dodgerblue;
+    border: 1px solid #ddd;
+    color: white;
+    cursor: pointer;
+}
+
+.form-inline button:hover {
+    background-color: royalblue;
+}
+
+@media (max-width: 800px) {
+    .form-inline input {
+        margin: 10px 0;
+    }
+
+    .form-inline {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+legend {
+    background-color: green;
+    color: white;
+    padding: 5px 10px;
+}
+
+#ordina_button{
+    margin-left:2em;
+}
+
+input[type=text], input[type=date], input[type=file],input[type=time],input[type=email], #data_nascita, input[type=password],select, textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.eventi_catalogo{
+    padding-bottom: 5em;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 3em;
+}
+
+/*MODALITA ADESIONE EVENTO*/
+.fornitura {
+    padding-bottom: 30px;
+}
+.fornitura h2{
+    display:inline-block;
+}
+
+/* CONTENUTO PAGINA EVENTO  */
+
+.page_container{
+    background-color:white;
+}
+
+.event_wrapper{
+    display:flex;
+}
+
+.cont_container{
+    margin-left:3em;
+    margin-top:3em;
+    width:50%;
+}
+
+.cont_container_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cont_container_header_right{
+    display: flex;
+    flex-direction:column;
+}
+
+.cont_container_header_right h5{
+    margin-right:6em;
+}
+
+.partecipero_button{
+    margin-right:10em;
+    width: 180px;
+    height: 40px;
+    border-radius: 9px;
+    cursor:pointer;
+}
+
+.annulla_partecipazione_button{
+    margin-right:10em;
+    width: 180px;
+    height: 40px;
+    border-radius: 9px;
+    background-color: red;
+    cursor:pointer;
+}
+
+.event_button{
+    width:150px;
+    height:40px;
+}
+
+.img_event_container{
+    width:50%;
+}
+
+.img_event_container img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    margin-top:3em;
+    margin-bottom:3em;
+    position:sticky; /* fa rimanere l'immagine nello schermo quando scrolli*/
+    top:3em;
+}
+
+.accordion_container{
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    width:90%;
+    margin-bottom:5px;
+}
+
+.accordion_event {
+    background-color: white;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.accordion_event:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active_event:after {
+    content: "\2212";
+}
+
+.panel_event {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+/*Login-Registrati */
+.login_box {
+    display:flex;
+    flex-direction:column;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+/*FORM ACQUISTO BIGLIETTO*/
+.form-biglietto{
+    display:flex; 
+    flex-direction: column; 
+    padding:1em;
+}
+#inputNomeEvento, #inputLuogoEvento,#inputDataEvento{
+    width: 25%;
+}
+#numeroBiglietti{
+    width:5%; text-align:center;
+}
+#DatiEvento,#DatiAcquisto{
+    margin:0.5em;
+    border-color: gray;
+}
+.icon-container {
+    font-size: 30px;
+}
+.cardsLabel{
+    font-size:20px;
+}
+#metodoPagamento{
+    width:40%;  
+}
+#submitPagamento{
+    width:40%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#resetPagamento{
+    width:40%;
+    background-color: red;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.formbuttons{
+    display:flex;
+    justify-content: space-around;
+}
+.datiPagamento{
+    display:none;
+}
+.datiPagamentoAttivo{
+    display:block;
+}
+.payment{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: flex-start;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+}
+#cvv{
+    width: 40%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+#cardnumber,#cardname{
+    width:100%;
+}
+.labelAcquisto{
+    width:350px;
+    text-align: center;
+    padding:10px;    
+}
+.expdate{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#priceBox{
+    width:20%;
+}
+@media screen and (max-width: 1000px) {
+    .form-biglietto {
+        display:flex;
+        flex-direction: column;
+        align-items: stretch;
+        padding-right:1em;
+    }
+    #inputNomeEvento, #inputLuogoEvento,#inputDataEvento{
+        width: 100%;
+    }
+    #DatiEvento{
+        display:flex;
+        flex-direction:column;
+    }
+    #DatiAcquisto{
+        display:flex;
+        flex-direction:column;
+    }
+    .payment{
+        display: flex;
+        flex-direction: column;
+    }
+    .expdate{
+        display: flex;
+        flex-direction: column;
+        align-items:stretch;
+    }
+    #priceBox{
+        width:11%;
+    }
+    #numeroBiglietti{
+        width:7%; text-align:center;
+    }
+    #metodoPagamento{
+        width:30%;  
+    }
+    .labelAcquisto{
+        text-align: left;
+
+    }
+
+}
+@media screen and (max-width: 800px) {
+    .form-biglietto {
+        display:flex;
+        flex-direction: column;
+        align-items: stretch;
+        padding-right:1em;
+    }
+    #inputNomeEvento, #inputLuogoEvento,#inputDataEvento{
+        width: 100%;
+    }
+    #DatiEvento{
+        display:flex;
+        flex-direction:column;
+    }
+    #DatiAcquisto{
+        display:flex;
+        flex-direction:column;
+    }
+    .payment{
+        display: flex;
+        flex-direction: column;
+    }
+    .expdate{
+        display: flex;
+        flex-direction: column;
+        align-items:stretch;
+    }
+    #prova{
+        display: flex;
+        flex-direction: column;
+    }
+    #metodoPagamento,#priceBox{
+        width:100%;
+    }
+    #numeroBiglietti{
+        width:30%;
+    }
+    .labelAcquisto{
+        text-align: left;
+
+    }
+}
+@media screen and (max-width: 650px) {
+    .form-biglietto {
+        display:flex;
+        flex-direction: column;
+        align-items: stretch;
+        padding-right:1em;
+    }
+    #inputNomeEvento, #inputLuogoEvento,#inputDataEvento{
+        width: 100%;
+    }
+    #DatiEvento{
+        display:flex;
+        flex-direction:column;
+    }
+    #DatiAcquisto{
+        display:flex;
+        flex-direction:column;
+    }
+    .payment{
+        display: flex;
+        flex-direction: column;
+    }
+    .expdate{
+        display: flex;
+        flex-direction: column;
+        align-items:stretch;
+
+    }
+    #prova{
+        display: flex;
+        flex-direction: column;
+    }
+    #metodoPagamento,#priceBox{
+        width:100%;
+    }
+    #numeroBiglietti{
+        width:30%;
+    }
+}
+@media screen and (max-width: 550px) {
+    .form-biglietto {
+        display:flex;
+        flex-direction: column;
+        align-items: stretch;
+        padding-right:1em;
+    }
+    #inputNomeEvento, #inputLuogoEvento,#inputDataEvento{
+        width: 100%;
+    }
+    #DatiEvento{
+        display:flex;
+        flex-direction:column;
+    }
+    #DatiAcquisto{     
+        display:flex;
+        flex-direction:column;
+    }
+    .payment{
+        display: flex;
+        flex-direction: column;
+    }
+    .expdate{
+        display: flex;
+        flex-direction: column;
+        align-items:stretch;
+    }
+    #prova{
+        display: flex;
+        flex-direction: column;
+    }
+    #metodoPagamento,#priceBox{
+        width:100%;
+    }
+    #numeroBiglietti{
+        width:30%;
+    }
+    #DatiAcquisto div{
+        width:324px;
+    }
+}
+/* paginator */
+
+#paginate{
+    margin:20px; 
+    padding: 20px;
+    text-align:center;
+    font-size: 20px;
+}
+
+.eventimg{
+    height: 100%; 
+    width: 100%; 
+    object-fit: contain;
+}
+/*PAGINA RIEPILOGO ACQUISTO*/
+#nomeR,#numeroR,#dataR,#cvvR{
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width:300px;
+}
+.riep{
+    display:flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-color: gray;
+}
+.riep_buttons{
+    display:flex; 
+    justify-content: space-around;
+}
+@media screen and (max-width: 1000px){
+    #nomeR,#numeroR,#dataR,#cvvR{
+        width:200px;
+    }
+}
+@media screen and (max-width: 800px) {
+    .riep{
+        flex-direction: column;
+    }
+    #nomeR,#numeroR,#dataR,#cvvR{
+        width:100%;
+    }
+}
+/* AREA UTENTE(annulla new per faq)*/
+#annulla,#annullaNew{
+    width:40%;
+    background-color: red;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#confirm{
+    width:40%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.formUtenteBottoni{
+    display:flex;
+    justify-content: space-around;
+}
+.formUtente{
+    display:flex;
+    flex-direction:column;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+/* CONTENUTO STORICO*/
+
+.storico_grid{
+    width:70%;
+    margin:0 auto;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(1, 1fr);
+    padding-top:2em;
+    padding-bottom:2em;
+}
+
+
+.biglietto{
+    display:flex;
+    height:16em;
+    border-style: solid;
+    border-width:1px;
+    box-shadow:10px 10px 10px grey;
+    background-color:white;
+    overflow: hidden;
+    border-radius: 20px;
+    border-color:#948e8e;
+}
+
+
+.img_biglietto_container{
+    display:flex;
+    flex:3;
+    overflow:hidden;
+}
+
+.img_biglietto_container img{
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    position:relative;
+    flex:1;
+    object-fit:cover;
+}
+
+.contenuto_biglietto{
+    display:flex;
+    flex-direction:column;	
+    justify-content: space-between;
+    flex:7;
+    padding-left:2em;
+    background-color: #e5e5f7;
+    opacity: 0.8;
+    background-image: radial-gradient(#444cf7 0.8500000000000001px, #e5e5f7 0.8500000000000001px);
+    background-size: 17px 17px;
+}
+
+.contenuto_biglietto h1{
+    margin-top:1px;
+    margin-bottom:1px;
+    font-size:30px;
+}
+.contenuto_biglietto h3{
+    margin-bottom:1px;
+    margin-top:1px;
+    margin-bottom:1px;
+}
+
+.top_contenuto_biglietto{
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+}
+
+.top_contenuto_biglietto h3{
+    margin-top:5px;
+    margin-right:5px;
+}
+
+.top_up_contenuto_biglietto{
+    text-align: right;
+}
+.top_down_contenuto_biglietto{
+    display:flex;
+    flex-direction:column;
+}
+
+.bottom_contenuto_biglietto{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+
+.bottom_contenuto_biglietto .organizzatore{
+    align-self: flex-end;
+}
+.costo_biglietto{
+    align-self:flex-end;
+}
+
+.costo_biglietto h5{
+    margin-top:1px;
+    margin-bottom:0px;
+}
+
+.costo_biglietto h2{
+    margin-top:0px;
+    margin-bottom:1px;
+    font-size:30px;
+}
+
+.decorazione_biglietto{
+    display:flex;
+    flex:1;
+    overflow:hidden;
+    border-left: 1px solid grey;
+}
+
+.decorazione_biglietto img{
+    max-width: 90%;
+    height: 90%;
+    display: block;
+    position: relative;
+    flex: 1;
+    margin: auto;
+}
+
+@media screen and (max-width: 1300px) {
+    .biglietto{
+        height:14em;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .biglietto{
+        height:12em;
+    }
+}
+
+
+/*Area Organizzazione*/
+.btn_Tab{display:flex;
+         flex-direction: column;
+            align-items: center;}
+.btn_Tab .btn_img{
+    width:25px;
+    height:25px;
+    cursor:pointer;
+}
+.tab-container{
+    overflow-x: auto;
+}
+.events_Tab {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.events_Tab td, .events_Tab th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.events_Tab tr:nth-child(even){background-color: #f2f2f2;}
+
+.events_Tab tr:hover {background-color: #ddd;}
+
+.events_Tab th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+.accordion_container_areaOrg{
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    width:100%;
+    margin-bottom:5px;
+}
+
+
+.accordion_areaOrg {
+    background-color: white;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.accordion_areaOrg:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+
+.active_areaOrg:after {
+    content: "\2212";
+}
+
+.panel_areaOrg {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.panel_modificaEvento {
+    padding: 0 18px;
+    background-color: white;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+#map_canvas {
+    margin-top:6px;
+    margin-bottom:6px;
+    height: 500px;
+}
+#current {
+    padding-top: 25px;
+}
+
+/* Area Admin */
+
+.float-container {
+    padding-top:40px;
+    display: flex;
+    justify-content:space-around;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.float-child-left {
+    min-width:45%;
+    float: left;
+    height:auto;
+    text-align: center;
+    cursor: pointer;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border: 2px solid black;
+    border-bottom: none;
+    box-shadow: 13px -10px 5px 5px;
+    background-color: #FFFFFF;
+    z-index: 1;
+    margin-bottom: -1px;
+
+}
+
+
+.float-child-right {
+    min-width:45%;
+    float: left;
+    height:auto;
+    text-align: center;
+    cursor: pointer;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border: 1px solid black;
+    background-color: #EEEEEE;
+    box-shadow: 2px -2px 1px 1px;
+    z-index: 1;
+    margin-bottom: -1px;
+
+}
+
+.hide{
+    display:none;
+
+}
+
+.gest-clienti{
+    overflow-x:auto;
+    margin-top: 20px;
+    margin-bottom:20px;
+}
+
+.gest-organizzazioni{
+    opacity:0%;
+    width: 100%;
+    /*text-align: -webkit-center;*/
+}
+
+.gest-organizzazioni-form{
+    margin-top: 20px;
+}
+
+.wrap_admin{
+    background-color: #FFFFFF;
+    box-shadow: 13px -10px 5px 5px;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top:20px;
+    margin-left:30px;
+    margin-right:30px;
+    border: 1px black solid;
+    border-radius:5px;
+    margin-bottom:30px;
+}
+
+.table-gest-organizzazioni{
+    overflow-x:auto;
+    margin-top:20px;
+    text-align:-webkit-center;
+    text-align: -moz-center;
+}
+
+
+
+.table_area_admin{
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    border-collapse: collapse;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin-right:10px;
+    margin-left:10px;
+}
+
+.table_area_admin th,td{
+    text-align: left;
+    padding: 8px 10px;
+}
+
+.table_area_admin th{
+    border-bottom: 1px solid #3c9f3f;
+}
+
+.table_area_admin tr:last-of-type {
+    border-bottom: 2px solid #3c9f3f;
+}
+
+
+.table_area_admin th{
+    background-color: #4CAF50;
+    color: white;
+}
+
+.table_area_admin tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+.table_area_admin tr:hover {
+    background-color: #ddd;
+}
+
+.analisiVendita{
+display: none;
+flex-direction: column;
+padding:20px;
+}
+
+.admin_button{
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 16px;
+    padding: 20px;
+    width: 250px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.admin_button span{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.admin_button span:after{
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.admin_button:hover span{
+    padding-right: 25px; 
+}
+
+.admin_button:hover span:after{
+    opacity: 1;
+    right: 0;
+}
+
+#annulla_update , #annulla_add{
+    width: 40%;
+    background-color: red;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form_area_admin{
+    display:flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding-right:3em;
+    padding-left:3em;
+}
+
+.gest-organizzazioni-form{
+    display:flex;
+    flex-direction: column;
+    align-items:stretch;
+
+    padding:1.5em;
+}
+
+/*Prezzo e compra biglietto btn */
+.buy_price{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 5em;
+
+}
+
+@media screen and (max-width: 900px) {
+    .buy_price{
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+}
+.pricebox{
+    display: flex;
+    align-items: center;
+}
+
+.pricebox p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.pricebox .price{
+    color: #424954;
+    font-family: Verdana;
+    padding-right: 10px;
+    font-size: 21px;
+    font-weight: bold;
+    text-align: right;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    
+}
+
+.pricebox .discprice{
+    color: #CC0000;
+    font-family: Verdana;
+    padding-right: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: right;
+}
+/*FAQ Admin*/
+.faq_button{
+    width:150px;
+    height:40px;
+    }
+.elimina_button{
+    width:150px;
+    height:40px;
+}
+.nuovaFaq_button{
+    width:150px;
+    height:40px;
+    margin-top:3em;
+    margin-bottom:3em;
+}
+

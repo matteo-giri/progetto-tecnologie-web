@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Uso DIV per layout a dimensione fissa</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="tweb.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+		<div class="header">
+			<div class="logo">
+				<h2>Progetto TWeb</h2>
+			</div>
+			<div class="login_signup">
+			<a>Accedi</a>
+			/
+			<a>Registrati</a>
+			</div>				
+		</div>
+                <script>
+                function myFunction() {
+                  var x = document.getElementById("myTopnav");
+                  if (x.className === "topnav") {
+                    x.className += " responsive";
+                  } else {
+                    x.className = "topnav";
+                  }
+                }
+                </script>
+		<div class="topnav" id="myTopnav">
+			<a href="tweb.html" class="active">Home</a>
+			<a href="catalogo.html">Catalogo</a>
+			
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<i class="fa fa-bars"></i>
+			</a>
+		</div>
+
+		<section id="content">
+                    <div class="wrapper" >
+                        <div class="fornitura">
+                            <h2>ADESIONE AI SERVIZI - TICKETPLANET</h2>
+                            <hr>
+                            <h3>Mediante la piattaforma tecnologica TICKETPLANET è possibile effettuare:</h3>
+                            <ul>
+                                <li>
+                                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                                </li>
+                                
+                                <li>
+                                          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                                    
+                                </li>
+                            </ul>
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+                        sunt in culpa qui officia deserunt mollit anim id est laborum."
+                        </div>
+                    </div>
+			
+		<div class="footer">
+            <div class = "footer_wrap_left">
+                <ul style="list-style-type: none">
+                    <li><a>FAQs</a></li>
+                    <li><a>Modalità adesione eventi</a></li>
+                    <li><a>Modalità fornitura servizi</a></li>
+                </ul>
+            </div>
+            <div class = "footer_wrap">
+                <ul style="list-style-type: none">
+                    <li>Contatti</li>
+                    <li>tel:0718458686</li>
+                    <li><a>email:info@tweb.it</a></li>
+                </ul>
+            </div>
+            <div class = "footer_wrap_right">
+            </div>
+        </div>
+</html>

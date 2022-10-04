@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Uso DIV per layout a dimensione fissa</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="tWeb.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+		<div class="header">
+			<div class="logo">
+				<h2>Progetto TWeb</h2>
+			</div>
+			<div class="login_signup">
+			<a>Accedi</a>
+			/
+			<a>Registrati</a>
+			</div>				
+		</div>
+                <script>
+                function myFunction() {
+                  var x = document.getElementById("myTopnav");
+                  if (x.className === "topnav") {
+                    x.className += " responsive";
+                  } else {
+                    x.className = "topnav";
+                  }
+                }
+                </script>
+		<div class="topnav" id="myTopnav">
+			<a href="tweb.html" class="active">Home</a>
+			<a href="catalogo.html">Catalogo</a>
+			
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<i class="fa fa-bars"></i>
+			</a>
+		</div>
+
+		<section id="content">
+			<div class="home_evidenza">
+				<h1>Eventi in evidenza</h1>
+				<div class="grid_container">
+					<div class="event_box">			
+						<h2>Nome evento</h2>
+						<p class="luogo_evento">Luogo dell'evento</p>
+						<p class="data_evento"> data evento</p>
+						<hr>
+						<h5>Categoria evento</h5>
+						<div class="img_container">
+						<img src="fotoevento.jpg">
+						</div>
+					</div>
+					<div class="event_box">			
+						<h2>Nome evento</h2>
+						<p class="luogo_evento">Luogo dell'evento</p>
+						<p class="data_evento"> data evento</p>
+						<hr>
+						<h5>Categoria evento</h5>
+						<div class="img_container">
+						<img src="fotoevento.jpg">
+						</div>
+					</div>
+					<div class="event_box">			
+						<h2>Nome evento</h2>
+						<p class="luogo_evento">Luogo dell'evento</p>
+						<p class="data_evento"> data evento</p>
+						<hr>
+						<h5>Categoria evento</h5>
+						<div class="img_container">
+						<img src="fotoevento.jpg">
+						</div>
+					</div>
+					<div class="event_box">			
+						<h2>Nome evento</h2>
+						<p class="luogo_evento">Luogo dell'evento</p>
+						<p class="data_evento"> data evento</p>
+						<hr>
+						<h5>Categoria evento</h5>
+						<div class="img_container">
+						<img src="fotoevento.jpg">
+						</div>
+					</div>
+					<div class="event_box">			
+						<h2>Nome evento</h2>
+						<p class="luogo_evento">Luogo dell'evento</p>
+						<p class="data_evento"> data evento</p>
+						<hr>
+						<h5>Categoria evento</h5>
+						<div class="img_container">
+						<img src="fotoevento.jpg">
+						</div>
+					</div>
+				</div>			
+			</div>
+			<div class="home_scopri">
+				<h1>Scopri</h1>
+				<div class="grid_container">
+					<div class="event_box">			
+						<h2>Nome evento</h2>
+						<p class="luogo_evento">Luogo dell'evento</p>
+						<p class="data_evento"> data evento</p>
+						<hr>
+						<h5>Categoria evento</h5>
+						<div class="img_container">
+						<img src="fotoevento.jpg">
+						</div>
+					</div>
+					<div class="event_box">			
+						<h2>Nome evento</h2>
+						<p class="luogo_evento">Luogo dell'evento</p>
+						<p class="data_evento"> data evento</p>
+						<hr>
+						<h5>Categoria evento</h5>
+						<div class="img_container">
+						<img src="fotoevento.jpg">
+						</div>
+					</div>
+					<div class="event_box">			
+						<h2>Nome evento</h2>
+						<p class="luogo_evento">Luogo dell'evento</p>
+						<p class="data_evento"> data evento</p>
+						<hr>
+						<h5>Categoria evento</h5>
+						<div class="img_container">
+						<img src="fotoevento.jpg">
+						</div>
+					</div>	
+					<div class="event_box">			
+						<h2>Nome evento</h2>
+						<p class="luogo_evento">Luogo dell'evento</p>
+						<p class="data_evento"> data evento</p>
+						<hr>
+						<h5>Categoria evento</h5>
+						<div class="img_container">
+						<img src="fotoevento.jpg">
+						</div>
+					</div>	
+					<div class="event_box">			
+						<h2>Nome evento</h2>
+						<p class="luogo_evento">Luogo dell'evento</p>
+						<p class="data_evento"> data evento</p>
+						<hr>
+						<h5>Categoria evento</h5>
+						<div class="img_container">
+						<img src="fotoevento.jpg">
+						</div>
+					</div>
+				</div>
+			</div>		
+		</section>
+		<div class="footer">
+            <div class = "footer_wrap_left">
+                <ul style="list-style-type: none">
+                    <li><a>FAQs</a></li>
+                    <li><a>Modalità adesione eventi</a></li>
+                    <li><a>Modalità fornitura servizi</a></li>
+                </ul>
+            </div>
+            <div class = "footer_wrap">
+                <ul style="list-style-type: none">
+                    <li>Contatti</li>
+                    <li>tel:0718458686</li>
+                    <li><a>email:info@tweb.it</a></li>
+                </ul>
+            </div>
+            <div class = "footer_wrap_right">
+            </div>
+        </div>
+</html>

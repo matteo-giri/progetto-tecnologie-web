@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FAQs</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="tWeb.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                <script>
+               function myFunction() {
+                  var x = document.getElementById("myTopnav");
+                  if (x.className === "topnav") {
+                    x.className += " responsive";
+                  } else {
+                    x.className = "topnav";
+                  }
+                }
+                window.onload = function(){
+                //metodo che prende tutti gli elementi con classe di stile accordione e li mette nell'array faq di oggetti
+                var faq = document.getElementsByClassName("accordion");
+                    for (var i = 0; i < faq.length; i++) {
+                        /*aggiunge un listener di evento click all'elemento i-esimo del vettore faq. il primo parametro è il tipo                             di listener da aggiungere. Il secondo è una funzione lambda che determina cosa succede al verificarsi                               dell'evento*/
+                        faq[i].addEventListener("click", function() {
+                            /*this è riferito all'elemento i-esimo di faq.La proprietà classList è una proprietà solo leggibile                                   che ritorna un elemento di tipo DOMTokenList che è una collection che raccoglie tutti gli attributi                                 class che indicano le classi di stile applicate all'elemento. Il metodo toggle aggiunge a questa                                    collection la classe di stile che gli passo come parametro se tale classe non è già dentro la                                       collection e rimuove invece la classe di stile se essa è già presente*/
+                            this.classList.toggle("activefaq");
+
+                            /* La proprietà nextElementSibling ritorna un riferimento all'oggetto nel DOM associato all'elemento                                 immediatamente successivo(cioè la tag) a quello su cui chiamo la proprietà */
+                            var panel = this.nextElementSibling;
+                              if (panel.style.maxHeight) { 
+                                  /*La proprietà maxHeight è la proprietà che indica l'altezza msssima di un elemento. Se messa a                                       null l'elemento scompare ed è come se non venisse visualizzato*/
+                                  panel.style.maxHeight = null;
+                              } else {
+                                  panel.style.maxHeight = panel.scrollHeight + "px";
+                              }
+                          });
+                      }
+                  };
+                 </script>
+    </head>
+    <body>
+		<div class="header">
+			<div class="logo">
+				<h2>Progetto TWeb</h2>
+			</div>
+			<div class="login_signup">
+			<a>Accedi</a>
+			/
+			<a>Registrati</a>
+			</div>				
+		</div>
+		<div class="topnav" id="myTopnav">
+			<a href="tweb.html" class="active">Home</a>
+			<a href="catalogo.html">Catalogo</a>
+			
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<i class="fa fa-bars"></i>
+			</a>
+		</div>
+            <section id ="content">
+                <div class ="wrapper_FAQ">
+                  <h1 class="faqH1">FAQs</h1>
+                   <br>
+                   <!-- Le tag button della classe accordion devono per forz stare immediatamente prima la tag div con classe di                            stile Panel perchè il codice Javascript che implementa la comparsa dei div non riesce a farli comparire                             (deriva dall'uso della proprietà nextElementSibling)-->
+                   <button class="accordion">I piedi sono le mani delle gambe o le gambe sono le mani dei piedi?                                 </button>
+                   <div class="panel">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore                                 et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut                                   aliquip ex ea commodo consequat.</p>
+                   </div>
+                   <button class="accordion">I piedi sono le mani delle gambe o le gambe sono le mani dei piedi?                                 </button>
+                   <div class="panel">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore                                 et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut                                   aliquip ex ea commodo consequat.</p>
+                   </div> 
+                        <button class="accordion">I piedi sono le mani delle gambe o le gambe sono le mani dei piedi?                                 </button>
+                        <div class="panel">
+                               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                                   labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                   nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                </div>
+            </section>
+                		<div class="footer">
+            <div class = "footer_wrap_left">
+                <ul style="list-style-type: none">
+                    <li><a>FAQs</a></li>
+                    <li><a>Modalità adesione eventi</a></li>
+                    <li><a>Modalità fornitura servizi</a></li>
+                </ul>
+            </div>
+            <div class = "footer_wrap">
+                <ul style="list-style-type: none">
+                    <li>Contatti</li>
+                    <li>tel:0718458686</li>
+                    <li><a>email:info@tweb.it</a></li>
+                </ul>
+            </div>
+            <div class = "footer_wrap_right">
+            </div>
+        </div>
+    </body>
+</html>
