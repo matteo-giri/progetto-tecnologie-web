@@ -8,6 +8,5 @@ Made by Matteo Giri, Lorenzo Tiseni, Edoardo Bilancia, Andrea Camilloni.
 
 ![example2](images/example2.png)
 
-![example3](images/example3.png)
 
 Read the full report [here](<Relazione tWeb.docx>) (in Italian).
